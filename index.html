@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ezequiel">
+    <title>Ezequiel</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/dist/css/theme-elements.css">
+    <link rel="stylesheet" href="assets/dist/css/default.css">
+    <link rel="stylesheet" href="assets/vendor/sweetalert/sweetalert.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/dist/css/app.css">
+
+    <link rel="stylesheet" href="assets/dist/css/simple-line-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+
+    <script src="assets/dist/js/modernizr.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        .swal2-popup {
+            border-left: 6px solid #F39C12;
+            color: #00f377;
+        }
+
+        .swal2-content {
+            color: #000;
+        }
+    </style>
+
+    <div id="particles-js"></div>
+
+    <div class="body"
+        style="background-image: url('assets/resources/img/background.jpg'); background-size: cover;background-repeat: repeat;background-attachment: fixed;background-position: center; min-height: 150vh;">
+
+        <!-- background-image: url('assets/resources/img/background.jpeg') -->
+        <div role="main" class="main" style="background-color: rgba(0, 0, 0, 0.5)">
+
+            <div class="alert alert-secondary alert-dismissible" style="background-color: #dc3545">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+                <div class="lead text-center" style="font-size: 0.9rem; font-family: 'Nova Square', sans-serif">
+                    ¡SORPRENDEME Y YO, TE SORPRENDO A TI!
+                </div>
+            </div>
+
+            <div class="container">
+                <span class="text-white" style="font-family: 'Nova Square', sans-serif; font-size: 1.5rem">
+                    <small>💎</small> "Free Fire TikTok"
+                </span>
+            </div>
+
+            <div class="container py-5">
+
+                <h1 class="display-4 text-center text-white">
+                    <span class="small-ff" style="font-family: 'Nova Square', sans-serif;">FF</span>
+                    <span style="font-family: 'Nova Square', sans-serif">Convertidor</span>
+                    <span class="small-ff" style="font-family: 'Nova Square', sans-serif;">FF</span>
+                </h1>
+
+                <div class="row justify-content-center sticky-top">
+                    <div class="col-sm-12 col-md-8 col-lg-6 ">
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"
+                                style="background-color: #2D2A8C; border: none">
+                                <img src="assets/resources/img/icon-user.png" width="32px" alt="">
+                            </span>
+                            <input class="form-control text-4 text-white custom-border-bottom" id="insert-your-id"
+                                type="search" style="background-color: #2D2A8C;" placeholder="INGRESE ID" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"
+                                style="background-color: #2D2A8C; border: none">
+                                <img src="assets/resources/img/gold.png" width="32px" alt="">
+                            </span>
+                            <input class="form-control text-4 text-white custom-border-bottom" id="insert-your-gold"
+                                type="search" style="background-color: #2D2A8C;" placeholder="CANTIDAD DE ORO" required>
+                        </div>
+
+                        <div class="d-flex justify-content-end mb-3">
+                            <button id="btn-search" type="button" class="btn btn-sm text-white px-3 float-end"
+                                style="border-radius: 1%; background-color: #0d6efd">
+                                <span style="font-size: 1rem; font-family: 'orbitron', sans-serif;">
+                                    BUSCAR
+                                </span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12">
+
+                        <div id="getInformation" class="row justify-content-center my-3 d-none"
+                            style="z-index: 999999;">
+                            <h4 class="text-white pr-3" style="font-family: 'Nova Square', sans-serif">Obteniendo
+                                información
+                            </h4>
+                            <div class="spinner-border text-light" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                        </div>
+
+                        <div id="accountFound" class="container mt-3 d-none">
+                            <h4 class="text-white text-center" style="font-family: 'Nova Square', sans-serif">
+                                Cuenta encontrada!
+                            </h4>
+
+                            <div class="text-center">
+                                <img src="assets/resources/img/gold.png" width="32px" alt="">
+                                <strong class="quantity-gold text-center text-white">
+                                    12500
+                                </strong>
+                            </div>
+
+                            <div class="container-fluid my-5">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="customRange1" style="font-family: 'Nova Square', sans-serif"
+                                            class="form-label text-white">Seleccione cantidad</label>
+                                        <input type="range" class="form-range range-danger w-100" id="customRange1"
+                                            min="0" max="12500" value="0" step="1">
+                                        <div class="text-right pt-0">
+                                            <img src="assets/resources/img/diamond.png" width="22px" alt="">
+                                            <span id="rangeValue" class="text-white">0 / <span class="quantity-gold text-white"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-5">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <button id="btn-convert" type="button" class="btn btn-secondary rounded-0 mb-2">
+                                            <span style="font-size: 1.2rem">CONVERTIR</span>
+                                            <div id="spinner-convert" class="spinner-border spinner-border-sm d-none" role="status">
+                                                <span class="visually-hidden"></span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="d-none nav nav-pills sort-source sort-source-style-3 justify-content-center"
+                    data-sort-id="portfolio" data-option-key="filter"
+                    data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}"></ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Vendor Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/vendor/libs/common.min.js"></script>
+    <script src="assets/vendor/libs/isotope.min.js"></script>
+    <script src="assets/dist/js/theme.js"></script>
+    <script src="assets/dist/js/init.js"></script>
+    <script src="assets/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+    <script src="assets/dist/js/app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+.body {
+    background: linear-gradient(to right, #1A1859, #000000);
+  }
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-border-bottom {
+    border-bottom: 2px solid #3BD9B5; /* Cambia el grosor y el color según sea necesario */
+  }
+
+.border-active {
+    border: 2px solid;
+    border-image: linear-gradient(to right, #1A1859, #fff) 1;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.color-dark {
+    color: rgb(46, 46, 46);
+}
+
+.text-border {
+    font-size: 2em;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+}
+
+.small-ff {
+    font-size: 0.3em;
+    vertical-align: center;
+}
+
+.nova-square-regular {
+    font-family: "Nova Square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.scrollable-div {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.swal2-popup {
+    background-color: #222222 !important; 
+}
+
+.swal2-title {
+    color: white !important; 
+}
+
+.swal2-content {
+    color: white !important; 
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical del indicador */
+    left: 50%; /* Ajusta la posición horizontal del indicador al centro */
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #333; /* Color del icono */
+    cursor: pointer;
+    display: none; /* Oculta el indicador por defecto */
+}
+
+::-webkit-scrollbar {
+    width: 5px; /* Ancho del scroll */
+    background-color: #0a1537; /* Color de fondo del scroll */
+}
+
+/* Cambia el color de la barra del scroll */
+::-webkit-scrollbar-thumb {
+    background-color: #ce6e32; /* Color de la barra del scroll */
+    border-radius: 6px; /* Radio de borde de la barra del scroll */
+}
+
+/* Cambia el color del fondo del área del scroll cuando se desplaza */
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color de fondo del área del scroll */
+}
+
+@media (min-width: 768px) {
+    .scrollable-div {
+        max-height: 780px; 
+    }
+}
+
+
+@media (max-width: 767px) {
+    .scrollable-div {
+        max-height: 420px;
+    }
+}
